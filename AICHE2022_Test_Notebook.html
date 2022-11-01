@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Welcome to CEN 587!" href="intro.html" />
+    <link rel="prev" title="Instructions and Workshop Preparation" href="Introduction.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -110,7 +110,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Welcome to CEN 587!
+                    Welcome to Python in Chemical Engineering!
                 </a>
             </li>
         </ul>
@@ -120,10 +120,22 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Test Notebook
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="Introduction.html">
+   Instructions and Workshop Preparation
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Test Notebook
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -407,8 +419,8 @@ title="Print to PDF"
 <div class="math notranslate nohighlight">
 \[r = \frac{kC_A}{1 + KC_A}\]</div>
 <p>Markdown in Jupyter has pretty robust support for LaTeX math mode; I use it extensively since it is much more readable than an equation written in text.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1766fe5f-3825-409d-89e9-2b2646f94bc4">
-<span class="eqno">(1)<a class="headerlink" href="#equation-1766fe5f-3825-409d-89e9-2b2646f94bc4" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8ab6c07d-13ca-4615-a1bb-eb7dd634bc4a">
+<span class="eqno">(1)<a class="headerlink" href="#equation-8ab6c07d-13ca-4615-a1bb-eb7dd634bc4a" title="Permalink to this equation">#</a></span>\[\begin{align}
     \frac{dN_A}{dt} &amp;= rV \\
     t &amp;= \int_{0}^{X_A} \frac{N_{A0}}{rV}dX_A
 \end{align}\]</div>
@@ -418,7 +430,12 @@ title="Print to PDF"
 <p>Markdown in Jupyter also supports HTML, which you can use to enrich formatting – pretty much anything you write in HTML can be embedded directly in a Markdown cell, and it will render correctly when the cell is executed.</p>
 <div class = "alert alert-block alert-success">
     <b>Note</b>: If you can write a bit of HTML, you'll look like a boss<sup>&#8482;</sup> when you are discussing things like numpy arrays and <code>solve_ivp()</code> in Python.
-    </div><div class="cell docutils container">
+    </div>
+<div class="admonition note" id="html-admonition">
+<p class="admonition-title">This is the <strong>title</strong></p>
+<p>This is the <em>content</em></p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A Code Cell</span>
 
@@ -875,11 +892,11 @@ The solver found a minimum at x = 10.0 and y = -5.0.
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Introduction.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Welcome to CEN 587!</p>
+            <p class="prev-next-title">Instructions and Workshop Preparation</p>
         </div>
     </a>
 </div>
