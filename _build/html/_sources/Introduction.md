@@ -1,3 +1,0 @@
-# Instructions and Workshop Preparation
-
-This chapter includes materials that should be reviewed prior to participation in the workshop. They cover software installation (or not), and they include a test Notebook that users can run in either Jupyter or Google Colab to verify for themselves that they have access to the necessary tools and packages to run all of the software presented in the workshop.
