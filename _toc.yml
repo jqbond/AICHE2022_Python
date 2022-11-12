@@ -3,9 +3,10 @@
 
 format: jb-book
 root: intro
-# parts: 
-#   - caption: Part I
-#     chapters: 
-#     - file: Introduction
-#       sections:
-#       - file: AICHE2022_Test_Notebook
+parts: 
+  - caption: Part I
+    chapters: 
+    - file: Introduction
+      sections:
+      - file: AICHE2022_Test_Notebook
+    - file: /Workshop Notebooks/
