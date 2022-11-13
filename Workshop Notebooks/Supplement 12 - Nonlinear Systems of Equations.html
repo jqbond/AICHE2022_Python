@@ -113,14 +113,9 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Part I
- </span>
-</p>
-<ul class="nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Introduction.html">
+  <a class="reference internal" href="../Chapter1.html">
    Instructions and Workshop Preparation
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -132,6 +127,85 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../AICHE2022_Test_Notebook.html">
      Test Notebook
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Chapter2.html">
+   Fundamental Skills in Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Module%2001%20-%20The%20Basics.html">
+     The Basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Module%2002%20-%20Data%20Structures.html">
+     Data Structures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Module%2003%20-%20Arrays%20and%20Matrices.html">
+     Arrays and Matrices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Module%2004%20-%20For%20Loops.html">
+     For Loops, Vectorization, and Plotting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Module%2005%20-%20Conditionals.html">
+     Logical Tests and Comparisons
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Module%2006%20-%20While%20Loops.html">
+     While Loops in Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Module%2007%20-%20Functions.html">
+     Functions, D&amp;D
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Chapter3.html">
+   Applications and Problem Solving in Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Module%2008%20-%20Probability.html">
+     The Probability of the Fall of Acererak
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Module%2009%20-%20Root%20Finding%2001.html">
+     Root Finding: Univariate Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Module%2010%20-%20Optimization%2001.html">
+     Minimizing a Univariate Function
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Module%2011%20-%20Optimization%2002.html">
+     Minimization of Multivariate Functoins
     </a>
    </li>
   </ul>
@@ -591,8 +665,8 @@ title="Print to PDF"
 <div class = "alert alert-block alert-warning">
     <b>Important</b>: In this assignment we are covering best practices for solving systems of <b>nonlinear equations</b>.  You can apply these methods to a system of linear equations, but there are much more efficient, closed-form analytical solutions based on linear algebra. If you are dealing with linear systems, then you want to use linear methods since they are more efficient and stable than the iterative, numerical solutions we'll use here.
     </div>
-<div class="amsmath math notranslate nohighlight" id="equation-90aeaab3-6186-4235-8d27-fe6f459d7114">
-<span class="eqno">()<a class="headerlink" href="#equation-90aeaab3-6186-4235-8d27-fe6f459d7114" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ecbba292-68b3-46a6-9999-d9fff835b94b">
+<span class="eqno">()<a class="headerlink" href="#equation-ecbba292-68b3-46a6-9999-d9fff835b94b" title="Permalink to this equation">#</a></span>\[\begin{align}
     x^2 - 3y &amp;= 14.75z - w^4 \\
     25 &amp;= x^3 - z \\ 
     0 &amp;= \ln(z) - z^2 + 2x + 3 \\
@@ -601,8 +675,8 @@ title="Print to PDF"
 <p>It is clear that we cannot solve any one equation above to determine the values for w, x, y, and z that satisfy these equations. We have to solve all four of them together, as a system, to do that.  We do have analytical methods that are useful - most students default to a substitution method, for example.  In general, this is fine if you want an analytical solution but we should note two problems with the approach.  First, soliving large nonlinear systems this way requires extensive algebraic manipulations, which is both extremely tedious and extremely error-prone. Second, it isn’t always possible to solve a system of nonlinear equations using analytical methods. More frequently, we will rely on numerical methods to solve nonlinear systems.  Similar to the cases we’ve already considered (e.g., a Newton-Raphson iteration), they are based on iterative solutions that proceed until the system reaches some convergence threshold. Just like with univariate equations, our convergence threshold is that we want the equations to evaluate to zero, it’s just in this case, we want each and every equation to equal zero.</p>
 <p>Now that we have a basic familiarity, we’ll jump straight into the root finding algorithms available in Python. Solving nonlinear systems numerically is, in general, very difficult, and it requires both good algorithms and good initial guesses, so we’ll skip writing our own routines like we did with univariate functions, but it is important to know that the basic approach of iteratively updating variable values until reaching your convergence threshold is the same.</p>
 <p>When we solve a system of equations numerically in Python (or in most softwares), we need to write that system as a set of equations that should evaluate to zero once we find our solution. So no matter how the functions are presented to me, I will convert them into a form where the left-hand-side is zero, and the right hand side specifies the function. Following this logic, I would write the above system as:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2824691d-1750-44c2-b7a1-ec250fdbd89e">
-<span class="eqno">()<a class="headerlink" href="#equation-2824691d-1750-44c2-b7a1-ec250fdbd89e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3b376897-e702-4244-ac0f-83fd7f595fb7">
+<span class="eqno">()<a class="headerlink" href="#equation-3b376897-e702-4244-ac0f-83fd7f595fb7" title="Permalink to this equation">#</a></span>\[\begin{align}
     0 &amp;= -x^2 - + 3y + 14.75z - w^4 \\
     0 &amp;= x^2 - z - 25 \\
     0 &amp;= \ln(z) - z^2 + 2x + 3 \\
@@ -770,8 +844,8 @@ title="Print to PDF"
 <h2>One final useful skill<a class="headerlink" href="#one-final-useful-skill" title="Permalink to this headline">#</a></h2>
 <p>Providing a Jacobian is usually a good idea when you are solving systems of equations numerically. It can be essential to performance and stability for difficult systems.  Most of the algorithms available in <code class="docutils literal notranslate"><span class="pre">opt.root()</span></code> will accept a Jacobian input.  Since it is such an essential skill, we’ll demonstrate its usage.  The Jacobian is the set of partial derivatives of each function in your system with respect to each variable. In the system above, that means my Jacobian will be a 4x4 matrix since I’d have to take a partial derivative of each equation with respect to w, x, y, and z.  It isn’t <em>hard</em>, but it is tedious (although you may want to look at symbolic, numerical, and/or automatica differentiation methods for generating Jacobians, which can make it much easier.  We won’t cover that here). We’ll go through a simpler example and create the corresponding Jacobian analytically.</p>
 <p>Here’s a simple system of equations written as functions of (a,b):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-40e11866-bb46-41cd-8dc5-0bcced888ad7">
-<span class="eqno">()<a class="headerlink" href="#equation-40e11866-bb46-41cd-8dc5-0bcced888ad7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fd1e7bf9-0f7b-4aec-add4-95e42075e950">
+<span class="eqno">()<a class="headerlink" href="#equation-fd1e7bf9-0f7b-4aec-add4-95e42075e950" title="Permalink to this equation">#</a></span>\[\begin{align}
     0 &amp;= a^3 - e^{-b} \\
     0 &amp;= ab - b^2 + 5
 \end{align}\]</div>
@@ -1042,7 +1116,7 @@ Function evaluations 6, initial cost 5.9187e-01, final cost 5.5471e-01, first-or
 The minimum of the objective function is 0.5547124699052083
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x21f445681f0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x18dbb63f490&gt;
 </pre></div>
 </div>
 <img alt="../_images/Supplement 12 - Nonlinear Systems of Equations_26_2.png" src="../_images/Supplement 12 - Nonlinear Systems of Equations_26_2.png" />
@@ -1097,7 +1171,7 @@ The minimum of the objective function using soft_l1 is 0.4933646113402903
 The minimum of the objective function using cauchy is 0.4321935995722679
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x21f445bdfd0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x18dc00927f0&gt;
 </pre></div>
 </div>
 <img alt="../_images/Supplement 12 - Nonlinear Systems of Equations_28_2.png" src="../_images/Supplement 12 - Nonlinear Systems of Equations_28_2.png" />
