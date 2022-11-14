@@ -44,14 +44,14 @@
 #     return [eq1, eq2, eq3, eq4]   #Technically, this will return a list [eq1, eq2, eq3, eq4]
 # ```
 
-# In[1]:
+# In[4]:
 
 
 import numpy as np
 import scipy.optimize as opt
 
 
-# In[2]:
+# In[5]:
 
 
 def F(w,x,y,z):
@@ -68,7 +68,7 @@ def F(w,x,y,z):
 # F(1,2,3,4)
 # ```
 
-# In[3]:
+# In[7]:
 
 
 F(1,2,3,4)
@@ -102,7 +102,7 @@ F(1,2,3,4)
 #     return retval
 # ```
 
-# In[4]:
+# In[9]:
 
 
 def F(var):
@@ -121,7 +121,7 @@ def F(var):
 # 
 #     F([1,2,3,4]) #Using a 4-element list because it is consistent with my return structure.
 
-# In[5]:
+# In[10]:
 
 
 F([1,2,3,4])
@@ -138,7 +138,7 @@ F([1,2,3,4])
 # 
 # At a minimum, I have to provide the function name (F) and my initial guess at the roots (w, x, y, and z) that give F = 0.
 
-# In[6]:
+# In[11]:
 
 
 var0 = [10, 10, 10, 10] #This is a list with my 4 initial guesses at the "roots" for w, x, y, and z
@@ -226,7 +226,7 @@ opt.root(F, var0)
 # opt.root(q, v0, method = 'hybr', jac = jacobian)
 # ```
 
-# In[7]:
+# In[12]:
 
 
 def q(v):
@@ -254,7 +254,7 @@ opt.root(q, v0, method = 'hybr', jac = jacobian)
 # 
 # This routine accomplishes the same things that we did in Supplement 11 for the Michaelis-Menten example; however, it is specifically designed for nonlinear least squares and offers some nice options like robust fitting, whereas `opt.minimize()` just minimizes the function that we supply to it.  In general, writing alternative "least squares" algorithms and properly scaling data requires a good understanding of the methods and the data, and the `opt.least_squares()` algorithm is built to handle some of this for us. The major difference between `opt.minimize()` and `opt.least_squares()` (other than the latter being specifically designed for least squares problem) is that `opt.minimize()` works on a scalar function (i.e., a function that returns the sum of squares), while `opt.least_squares()` works on a vector function.  Specifically, we provide `opt.least_squares()` with a function that calculates the vector of residuals, the difference between measurement and model, that includes every data point, and then `opt.least_squares()` generates the objective function automatically from that full vector of residuals. Revisiting that Michaelis-Menten example, let's load the data again:
 
-# In[8]:
+# In[13]:
 
 
 CS = np.array([0, 0.001, 0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1, 2, 5]) #mmol/L
@@ -276,7 +276,7 @@ rate = np.array([0, 0.017537467, 0.030941975, 0.080327165, 0.1643835, 0.26569368
 # ```
 # The bottom line in that section of code is just running the function for an initial guess of $V_{max} = 7$ and $K_m = 0.4$.
 
-# In[9]:
+# In[16]:
 
 
 def resid(par, Cexp, rexp):
@@ -295,7 +295,7 @@ resid(np.array([7,0.4]), CS, rate)
 #     par0 = np.array([7, 0.4])
 #     opt.least_squares(resid, par0, args = (CS, rate), verbose = 2)
 
-# In[10]:
+# In[17]:
 
 
 par0 = np.array([7, 0.4])
@@ -310,7 +310,7 @@ opt.least_squares(resid, par0, args = (CS, rate), verbose = 2)
 #     
 # Note that the structure of the bounds here is different from `opt.minimize()`; it is like the convention used for `opt.curve_fit()`. Here, the bounds argument is always formatted as $[(\textrm{lower bounds}), (\textrm{upper bounds})]$, where lower bounds and upper bounds are tuples that contain the lower bound on each parameter (in the same sequence as the parameters are packed into par), and upper bound contains the corresponding upper bounds.
 
-# In[11]:
+# In[19]:
 
 
 opt.least_squares(resid, par0, method = 'trf', args = (CS, rate), verbose = 2, bounds = [(6.8, 0.1), (7.5, 0.6)])
@@ -331,7 +331,7 @@ opt.least_squares(resid, par0, method = 'trf', args = (CS, rate), verbose = 2, b
 # plt.scatter(CS, rate)
 # ```
 
-# In[12]:
+# In[20]:
 
 
 import matplotlib.pyplot as plt
@@ -365,7 +365,7 @@ plt.scatter(CS, rate)
 # plt.scatter(CS, rate)
 # ```
 
-# In[13]:
+# In[22]:
 
 
 import matplotlib.pyplot as plt

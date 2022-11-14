@@ -267,7 +267,7 @@ plt.show()
 # plt.show()
 # ```
 
-# In[7]:
+# In[8]:
 
 
 sol = solve_ivp(D, xspan, y0, atol = 1e-10, rtol = 1e-10)
@@ -304,7 +304,7 @@ plt.show()
 #  
 # You'll see that this returns the values at the specified x-values (even though it does not affect the steps taken by the ode solver).
 
-# In[8]:
+# In[9]:
 
 
 xgrid = np.linspace(0,6,61)
@@ -330,7 +330,7 @@ plt.show()
 # print(sol)
 # ```
 
-# In[9]:
+# In[10]:
 
 
 sol = solve_ivp(D, xspan, y0, dense_output = True)
@@ -345,7 +345,7 @@ print(sol)
 # sol.sol(3)
 # ```
 
-# In[10]:
+# In[11]:
 
 
 sol.sol(3)
@@ -357,7 +357,7 @@ sol.sol(3)
 # sol.sol([1, 2.6, 3.175, 4]) #pass a list of x values; can also use a tuple or an array
 # ```
 
-# In[11]:
+# In[12]:
 
 
 sol.sol([1, 2.6, 3.175, 4])
@@ -417,7 +417,7 @@ sol.sol([1, 2.6, 3.175, 4])
 #     return [dxdt, dydt]
 # ```
 
-# In[12]:
+# In[14]:
 
 
 def diffs(t,var):
@@ -437,7 +437,7 @@ def diffs(t,var):
 # solve_ivp(diffs, tspan, var0) #use solve_ivp to solve the system of ODEs
 # ```
 
-# In[13]:
+# In[15]:
 
 
 tspan = (0, 10)   #Integration span
@@ -470,7 +470,7 @@ solve_ivp(diffs, tspan, var0) #use solve_ivp to solve the system of ODEs
 # plt.show()
 # ```
 
-# In[14]:
+# In[16]:
 
 
 tgrid = np.linspace(0, 10, 100)
@@ -536,7 +536,7 @@ plt.show()
 # plt.show()
 # ```
 
-# In[15]:
+# In[17]:
 
 
 def diffs(t,var, a, b, c):

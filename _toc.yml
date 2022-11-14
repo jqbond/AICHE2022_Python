@@ -3,10 +3,25 @@
 
 format: jb-book
 root: intro
-parts: 
-  - caption: Part I
-    chapters: 
-    - file: Introduction
-      sections:
-      - file: AICHE2022_Test_Notebook
-    - file: /Workshop Notebooks/
+chapters: 
+- file: Chapter1
+  sections:
+  - file: AICHE2022_Test_Notebook
+- file: Chapter2
+  sections:
+  - file: Workshop Notebooks/Module 01 - The Basics
+  - file: Workshop Notebooks/Module 02 - Data Structures
+  - file: Workshop Notebooks/Module 03 - Arrays and Matrices
+  - file: Workshop Notebooks/Module 04 - For Loops
+  - file: Workshop Notebooks/Module 05 - Conditionals
+  - file: Workshop Notebooks/Module 06 - While Loops
+  - file: Workshop Notebooks/Module 07 - Functions
+- file: Chapter3
+  sections:
+  - file: Workshop Notebooks/Module 08 - Probability
+  - file: Workshop Notebooks/Module 09 - Root Finding 01
+  - file: Workshop Notebooks/Module 10 - Optimization 01
+  - file: Workshop Notebooks/Module 11 - Optimization 02
+  - file: Workshop Notebooks/Module 12 - Root Finding 02
+  - file: Workshop Notebooks/Module 13 - ODEs
+  - file: Workshop Notebooks/Module 14 - Quadrature

@@ -72,7 +72,7 @@ def integrand(x):
 # int_val, err_val = integrate.quadrature(integrand, 0, 10)
 # ```
 
-# In[3]:
+# In[4]:
 
 
 int_val, err_val = integrate.quadrature(integrand, 0, 10)
@@ -89,7 +89,7 @@ print(int_val, err_val)
 # plt.scatter(x,y)
 # ```
 
-# In[4]:
+# In[13]:
 
 
 x = np.linspace(0, 10, 15)
@@ -125,7 +125,7 @@ plt.show()
 #     
 # This will return the approximate integrated area of y(x)dx over the domain of x that we've sampled.
 
-# In[5]:
+# In[14]:
 
 
 integrate.trapezoid(y, x)
@@ -139,7 +139,7 @@ integrate.trapezoid(y, x)
 # integrate.simpson(y, x) 
 # ```
 
-# In[6]:
+# In[15]:
 
 
 integrate.simpson(y, x) 
@@ -158,7 +158,7 @@ integrate.simpson(y, x)
 # 
 # https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.cumulative_trapezoid.html
 
-# In[7]:
+# In[25]:
 
 
 ctrapz = integrate.cumulative_trapezoid(y, x)
